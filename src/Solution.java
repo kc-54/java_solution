@@ -236,3 +236,14 @@ class Butterfly extends Animal implements canFly,canWalk{
 	}
 
 }
+//modelling a caterpillar
+class Caterpillar extends Animal implements canWalk{
+	public void walk(){
+		System.out.println("I can Walk");
+	}
+	
+	//return butterfly obj when metamorph
+	public Animal metamorph(){
+		return new Butterfly();
+	}
+}

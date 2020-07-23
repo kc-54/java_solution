@@ -170,6 +170,30 @@ public class SolutionTest {
 		assertEquals(false, invokeMethodAndReturnBool(butterfly,"canSing"));
 	}
 
+	//unit test 2a
+	@Test
+	public void testCaterpillarFly() {
+		Animal caterpillar = new Caterpillar();
+		assertEquals(false, invokeMethodAndReturnBool(caterpillar,"canFly"));
+	}
+	
+	//unit test 2b
+	@Test
+	public void testCaterpillarWalk() {
+		Animal caterpillar = new Caterpillar();
+		assertEquals(true, invokeMethodAndReturnBool(caterpillar,"canWalk"));
+	}
+	
+	//unit test 2 after metamorph
+	@Test
+	public void testCaterpillarMetamorph() {
+		Animal caterpillar = new Caterpillar();
+		caterpillar = ((Caterpillar)caterpillar).metamorph();
+		
+		assertEquals(true, invokeMethodAndReturnBool(caterpillar,"canFly"));
+	}
+	
+	
 	
 	//function to get boolean value of certain ability/method of an animal
 	public Boolean invokeMethodAndReturnBool(Animal animal, String method) {
