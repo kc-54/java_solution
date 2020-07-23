@@ -4,7 +4,7 @@
 
 This is a solution for java test created by Kelvin
 
-For question A:
+## For question A:
 
 
 The ability of each animal is defined using an interface. 
@@ -27,7 +27,7 @@ For the sing() method, it will check, if the neighbor is an Animal object and ca
 
 
 
-For question B:
+## For question B:
 
 
 The abstract class Animal has 2 variable property and action with getter and setter. Ex. Clownfish have property "orange and small" and action "make jokes". 
@@ -38,10 +38,10 @@ For each specific fish that extends fish class, it can set their property and ac
 
 For the dolphin use case, the class can extends Animal abstract class and implements CanSwim instead of extends from fish class.
 
-There isn't question C
+## There isn't question C
 
 
-For question D:
+## For question D:
 
 
 For the butterfly use case, the class can extends Animal abstract class and implements CanFly, CanWalk.
@@ -60,7 +60,7 @@ caterpillar = ((Caterpillar)caterpillar).metamorph();
 
 
 
-For question E:
+## For question E:
 
 
 For instantiating the array of animals : 
