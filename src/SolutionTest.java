@@ -3,6 +3,7 @@ import static org.junit.Assert.*;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.lang.reflect.InvocationTargetException;
+import java.util.Locale;
 
 import org.junit.Test;
 
@@ -234,6 +235,37 @@ public class SolutionTest {
 		//Duck, Shark, Clownfish, Dolphin can swim
 		assertEquals(4, Solution.count_swim(animals));
 	}
+
+	//Bonus
+	//unit test 1
+	@Test
+	public void testLangFrance() {
+		Animal rooster = new Rooster();
+		Locale.setDefault(new Locale("fr", "FRANCE"));
+		String sound = invokeMethodAndReturnPrintString(rooster,"sing");
+		assertEquals(true, "cocorico".equals(sound));
+		
+	}
+
+	//unit test 1
+	@Test
+	public void testLangGreek() {
+		Animal rooster = new Rooster();
+		Locale.setDefault(new Locale("el", "GREECE"));
+		String sound = invokeMethodAndReturnPrintString(rooster,"sing");
+		assertEquals(true, "kikiriki".equals(sound));
+		
+	}
+
+	//unit test 1
+	@Test
+	public void testLangDefault() {
+		Animal rooster = new Rooster();
+		String sound = invokeMethodAndReturnPrintString(rooster,"sing");
+		assertEquals(true, "Cock-a-doodle-doo".equals(sound));
+		
+	}
+	
 	
 	//function to get boolean value of certain ability/method of an animal
 	public Boolean invokeMethodAndReturnBool(Animal animal, String method) {

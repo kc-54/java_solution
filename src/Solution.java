@@ -1,3 +1,4 @@
+import java.util.Locale;
 
 public class Solution { 
 	public static void main(String[] args) { 
@@ -156,7 +157,26 @@ class Rooster extends Chicken{
 	//override the sing method from cluck, cluck to cock-a-doodle-doo
 	@Override
 	public void sing(){
-		System.out.println("Cock-a-doodle-doo");
+		Locale currentLocale = Locale.getDefault();
+		if("da".equals(currentLocale.getLanguage())) {//danish
+			System.out.println("kykyliky");
+		}else if("nl".equals(currentLocale.getLanguage())) {//dutch
+			System.out.println("kukeleku");
+		}else if("fi".equals(currentLocale.getLanguage())) {//finnish
+			System.out.println("kukko kiekuu");
+		}else if("fr".equals(currentLocale.getLanguage())) {//french
+			System.out.println("cocorico");
+		}else if("de".equals(currentLocale.getLanguage())) {//german
+			System.out.println("kikeriki");
+		}else if("el".equals(currentLocale.getLanguage())) {//greek
+			System.out.println("kikiriki");
+		}else if("iw".equals(currentLocale.getLanguage())) {//hebrew
+			System.out.println("coo-koo-ri-koo");
+		}else if("it".equals(currentLocale.getLanguage())) {//italian
+			System.out.println("chicchirichi");
+		}else {//default english
+			System.out.println("Cock-a-doodle-doo");
+		}
 	}
 
 }
