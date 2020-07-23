@@ -93,6 +93,29 @@ public class SolutionTest {
 		assertEquals(true, "Ring ring".equals(sound));
 	}
 	
+
+	//Question B
+	//unit test 1a
+	@Test
+	public void testFishSing() {
+		Animal fish = new Fish();
+		assertEquals(false, invokeMethodAndReturnBool(fish,"canSing"));
+	}
+	
+	//unit test 1b
+	@Test
+	public void testFishWalk() {
+		Animal fish = new Fish();
+		assertEquals(false, invokeMethodAndReturnBool(fish,"canWalk"));
+	}
+
+	//unit test 1c
+	@Test
+	public void testFishSwim() {
+		Animal fish = new Fish();
+		assertEquals(true, invokeMethodAndReturnBool(fish,"canSwim"));
+	}
+	
 	
 	//function to get boolean value of certain ability/method of an animal
 	public Boolean invokeMethodAndReturnBool(Animal animal, String method) {

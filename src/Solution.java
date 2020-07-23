@@ -172,3 +172,13 @@ class Cat extends Animal implements canSing,canWalk{
 		System.out.println("I can Walk");
 	}
 }
+
+
+//solution for B
+//modelling a fish
+class Fish extends Animal implements canSwim{
+	public void swim(){
+		System.out.println("I can Swim");
+	}
+}
+
