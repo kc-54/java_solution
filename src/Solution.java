@@ -24,6 +24,9 @@ interface canSwim{
 
 //abstract class for super class animal
 abstract class Animal {
+	//property and action for each animal
+	private String property = "";
+	private String action = "";
 	
 	//method to get information whether the subclass can perform certain ability
 	public boolean canFly(){
@@ -37,6 +40,20 @@ abstract class Animal {
 	}
 	public boolean canSwim(){
 		return canSwim.class.isAssignableFrom(this.getClass());
+	}
+	
+	//getter and setter for property and action
+	public void set_property(String property){
+		this.property = property;
+	}
+	public void set_action(String action){
+		this.action = action;
+	}
+	public String get_property(){
+		return this.property;
+	}
+	public String get_action(){
+		return this.action;
 	}
 }
 
@@ -180,5 +197,24 @@ class Fish extends Animal implements canSwim{
 	public void swim(){
 		System.out.println("I can Swim");
 	}
+}
+
+//specialize a class from fish
+class Shark extends Fish {
+
+	public Shark(){
+		this.set_property("Large and grey");
+		this.set_action("Eat other fish");
+	}
+}
+
+//specialize a class from fish
+class Clownfish extends Fish {
+
+	public Clownfish(){
+		this.set_property("Small and colourful (orange)");
+		this.set_action("Make jokes");
+	}
+
 }
 

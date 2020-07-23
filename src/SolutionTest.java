@@ -115,7 +115,39 @@ public class SolutionTest {
 		Animal fish = new Fish();
 		assertEquals(true, invokeMethodAndReturnBool(fish,"canSwim"));
 	}
+
+	//unit test 2a
+	@Test
+	public void testSharkProperty() {
+		Animal shark = new Shark();
+		String prop = invokeMethodAndReturnString(shark,"get_property");
+		assertEquals(true, "Large and grey".equals(prop));
+	}
 	
+	//unit test 2b
+	@Test
+	public void testClownfishProperty() {
+		Animal clownfish = new Clownfish();
+		String prop = invokeMethodAndReturnString(clownfish,"get_property");
+		assertEquals(true, "Small and colourful (orange)".equals(prop));
+	}
+	
+	//unit test 2c
+	@Test
+	public void testClownfishAction() {
+		Animal clownfish = new Clownfish();
+		String prop = invokeMethodAndReturnString(clownfish,"get_action");
+		assertEquals(true, "Make jokes".equals(prop));
+	}
+
+	//unit test 2d
+	@Test
+	public void testSharkAction() {
+		Animal shark = new Shark();
+		String prop = invokeMethodAndReturnString(shark,"get_action");
+		assertEquals(true, "Eat other fish".equals(prop));
+	}
+
 	
 	//function to get boolean value of certain ability/method of an animal
 	public Boolean invokeMethodAndReturnBool(Animal animal, String method) {
@@ -174,5 +206,31 @@ public class SolutionTest {
 		System.setOut(old);
 		//regex to remove hidden characters
 		return baos.toString().replaceAll("\\p{C}", "");
+	}
+	
+
+	//function to get string value from method return of Animal obj
+	public String invokeMethodAndReturnString(Animal animal, String method) {
+		String string = null;
+		try {
+			string = (String)animal.getClass().getMethod(method).invoke(animal);
+		} catch (IllegalAccessException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IllegalArgumentException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (InvocationTargetException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (NoSuchMethodException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SecurityException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return string;
 	}
 }
