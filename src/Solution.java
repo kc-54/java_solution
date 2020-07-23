@@ -218,3 +218,8 @@ class Clownfish extends Fish {
 
 }
 
+class Dolphin extends Animal implements canSwim{
+	public void swim(){
+		System.out.println("I can Swim");
+	}
+}

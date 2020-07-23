@@ -148,6 +148,13 @@ public class SolutionTest {
 		assertEquals(true, "Eat other fish".equals(prop));
 	}
 
+	//unit test 3a
+	@Test
+	public void testDolphinSwim() {
+		Animal dolphin = new Dolphin();
+		assertEquals(true, invokeMethodAndReturnBool(dolphin,"canSwim"));
+	}
+	
 	
 	//function to get boolean value of certain ability/method of an animal
 	public Boolean invokeMethodAndReturnBool(Animal animal, String method) {
