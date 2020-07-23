@@ -64,6 +64,7 @@ caterpillar = ((Caterpillar)caterpillar).metamorph();
 
 
 For instantiating the array of animals : 
+
 Animal[] animals = {new Bird(), new Duck(), new Chicken(), new Rooster(), new Parrot(), new Fish(), new Shark(), new Clownfish(), new Dolphin(), new Butterfly()}
 
 To count the number of animals with specific ability, the function will loop through the array and will call the method canAbility(ex. canFly), if it is true, it will increment the counter. 
