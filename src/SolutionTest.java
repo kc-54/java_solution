@@ -193,7 +193,47 @@ public class SolutionTest {
 		assertEquals(true, invokeMethodAndReturnBool(caterpillar,"canFly"));
 	}
 	
-	
+
+	//Question E
+	//unit test 1a
+	@Test
+	public void testCountAnimalFly() {
+		Animal[] animals = {
+				new Bird(), new Duck(), new Chicken(), new Rooster(), new Shark(), new Parrot(), new Clownfish(), new Dolphin()
+			};
+		//Duck, Bird, Parrot can fly
+		assertEquals(3, Solution.count_fly(animals));
+	}
+
+	//unit test 1b
+	@Test
+	public void testCountAnimalWalk() {
+		Animal[] animals = {
+				new Bird(), new Duck(), new Chicken(), new Rooster(), new Shark(), new Parrot(), new Clownfish(), new Dolphin()
+			};
+		//Bird, Duck, Chicken, Rooster and Parrot can walk
+		assertEquals(5, Solution.count_walk(animals));
+	}
+
+	//unit test 1c
+	@Test
+	public void testCountAnimalSing() {
+		Animal[] animals = {
+				new Bird(), new Duck(), new Chicken(), new Rooster(), new Shark(), new Parrot(), new Clownfish(), new Dolphin()
+			};
+		//Bird, Duck, Chicken, Rooster and Parrot can sing
+		assertEquals(5, Solution.count_sing(animals));
+	}
+
+	//unit test 1d
+	@Test
+	public void testCountAnimalSwim() {
+		Animal[] animals = {
+				new Bird(), new Duck(), new Chicken(), new Rooster(), new Shark(), new Parrot(), new Clownfish(), new Dolphin()
+			};
+		//Duck, Shark, Clownfish, Dolphin can swim
+		assertEquals(4, Solution.count_swim(animals));
+	}
 	
 	//function to get boolean value of certain ability/method of an animal
 	public Boolean invokeMethodAndReturnBool(Animal animal, String method) {

@@ -3,6 +3,43 @@ public class Solution {
 	public static void main(String[] args) { 
 		
 	} 
+
+	public static int count_fly(Animal[] animals){
+		int result = 0;
+		for(Animal iter : animals){
+			if(iter.canFly()){
+				result++;
+			}
+		}
+		return result;
+	}
+	public static int count_walk(Animal[] animals){
+		int result = 0;
+		for(Animal iter : animals){
+			if(iter.canWalk()){
+				result++;
+			}
+		}
+		return result;
+	}
+	public static int count_sing(Animal[] animals){
+		int result = 0;
+		for(Animal iter : animals){
+			if(iter.canSing()){
+				result++;
+			}
+		}
+		return result;
+	}
+	public static int count_swim(Animal[] animals){
+		int result = 0;
+		for(Animal iter : animals){
+			if(iter.canSwim()){
+				result++;
+			}
+		}
+		return result;
+	}
 } 
 
 //interface for each ability
