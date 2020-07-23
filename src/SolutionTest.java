@@ -61,6 +61,38 @@ public class SolutionTest {
 		assertEquals(false, invokeMethodAndReturnBool(rooster,"canFly"));
 	}
 
+	//unit test 4a
+	@Test
+	public void testParrotSoundWithDog() {
+		Animal parrot = new Parrot(new Dog());
+		String sound = invokeMethodAndReturnPrintString(parrot,"sing");
+		assertEquals(true, "Woof, woof".equals(sound));
+	}
+
+	//unit test 4b
+	@Test
+	public void testParrotSoundWithCat() {
+		Animal parrot = new Parrot(new Cat());
+		String sound = invokeMethodAndReturnPrintString(parrot,"sing");
+		assertEquals(true, "Meow".equals(sound));
+	}
+
+	//unit test 4c
+	@Test
+	public void testParrotSoundWithRooster() {
+		Animal parrot = new Parrot(new Rooster());
+		String sound = invokeMethodAndReturnPrintString(parrot,"sing");
+		assertEquals(true, "Cock-a-doodle-doo".equals(sound));
+	}
+
+	//unit test 4d
+	@Test
+	public void testParrotSoundWithPhone() {
+		Animal parrot = new Parrot("Ring ring");
+		String sound = invokeMethodAndReturnPrintString(parrot,"sing");
+		assertEquals(true, "Ring ring".equals(sound));
+	}
+	
 	
 	//function to get boolean value of certain ability/method of an animal
 	public Boolean invokeMethodAndReturnBool(Animal animal, String method) {
