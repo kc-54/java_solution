@@ -81,6 +81,7 @@ class Duck extends Animal implements canSing,canWalk,canSwim,canFly{
 
 }
 
+//class chicken
 class Chicken extends Animal implements canSing,canWalk{
 
 	//implements interface
@@ -93,3 +94,16 @@ class Chicken extends Animal implements canSing,canWalk{
 		System.out.println("I can Walk");
 	}
 }
+
+
+//model a rooster base on chicken
+class Rooster extends Chicken{
+
+	//override the sing method from cluck, cluck to cock-a-doodle-doo
+	@Override
+	public void sing(){
+		System.out.println("Cock-a-doodle-doo");
+	}
+
+}
+

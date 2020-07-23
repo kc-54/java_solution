@@ -46,6 +46,22 @@ public class SolutionTest {
 		assertEquals(false, invokeMethodAndReturnBool(chicken,"canFly"));
 	}
 	
+	//unit test 3a
+	@Test
+	public void testRoosterSound() {
+		Animal rooster = new Rooster();
+		String sound = invokeMethodAndReturnPrintString(rooster,"sing");
+		assertEquals(true, "Cock-a-doodle-doo".equals(sound));
+	}
+	
+	//unit test 3b
+	@Test
+	public void testRoosterFly() {
+		Animal rooster = new Rooster();
+		assertEquals(false, invokeMethodAndReturnBool(rooster,"canFly"));
+	}
+
+	
 	//function to get boolean value of certain ability/method of an animal
 	public Boolean invokeMethodAndReturnBool(Animal animal, String method) {
 		Boolean ablePerform = null;
