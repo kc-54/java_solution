@@ -223,3 +223,16 @@ class Dolphin extends Animal implements canSwim{
 		System.out.println("I can Swim");
 	}
 }
+
+//modelling a butterfly
+class Butterfly extends Animal implements canFly,canWalk{
+
+	public void fly(){
+		System.out.println("I can Fly");
+	}
+
+	public void walk(){
+		System.out.println("I can Walk");
+	}
+
+}

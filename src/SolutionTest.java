@@ -154,7 +154,22 @@ public class SolutionTest {
 		Animal dolphin = new Dolphin();
 		assertEquals(true, invokeMethodAndReturnBool(dolphin,"canSwim"));
 	}
+
+	//Question D
+	//unit test 1a
+	@Test
+	public void testButterflyFly() {
+		Animal butterfly = new Butterfly();
+		assertEquals(true, invokeMethodAndReturnBool(butterfly,"canFly"));
+	}
 	
+	//unit test 1b
+	@Test
+	public void testButterflySing() {
+		Animal butterfly = new Butterfly();
+		assertEquals(false, invokeMethodAndReturnBool(butterfly,"canSing"));
+	}
+
 	
 	//function to get boolean value of certain ability/method of an animal
 	public Boolean invokeMethodAndReturnBool(Animal animal, String method) {
